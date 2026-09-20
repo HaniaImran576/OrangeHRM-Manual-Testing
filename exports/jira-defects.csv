@@ -1,10 +1,10 @@
 Jira ID,Title,Module,Severity,Priority,Status,Linked Test Case
-OHRM-31,Login with invalid password does not display an error message,Authentication,Major,High,Open,TC-02
-OHRM-39,System fails to enforce rate-limiting or account lockout after multiple rapid failed login attempts,Authentication,Major,High,Open,TC-11
-OHRM-34,Leave request data persistence failure ("No records found" in Admin Leave List),Leave Management,Major,High,Open,TC-18
-OHRM-35,Leave request status displays as "Scheduled" instead of "Pending" immediately after submission,Leave Management,Minor,Medium,Open,TC-15
-OHRM-36,Submitted leave requests fail to sync/populate in Admin Leave List, blocking approval workflow,Leave Management,Major,High,Open,TC-21
-OHRM-37,Unable to execute leave rejection workflow due to missing request records in Admin queue,Leave Management,Major,High,Open,TC-22
-OHRM-38,Unable to execute overlapping leave validation test due to upstream leave request persistence and approval blockers,Leave Management,Medium,Medium,Open,TC-23
-OHRM-41,System fails to allow or process leave applications with the same start and end date (Single-day leave),Leave Management,Major,High,Open,TC-09
-OHRM-43,System fails to reject invalid special characters (e.g., @, $, numbers) in the employee name fields during creation/editing,PIM,Minor,Medium,Open,TC-10
+OHRM-31,"Login with invalid password does not display an error message",Authentication,Major,High,Open,TC-02
+OHRM-39,"System fails to enforce rate-limiting or account lockout after multiple rapid failed login attempts",Authentication,Major,High,Open,TC-11
+OHRM-34,"Leave request data persistence failure (""No records found"" in Admin Leave List)",Leave Management,Major,High,Open,TC-18
+OHRM-35,"Leave request status displays as ""Scheduled"" instead of ""Pending"" immediately after submission",Leave Management,Minor,Medium,Open,TC-15
+OHRM-36,"Submitted leave requests fail to sync/populate in Admin Leave List, blocking approval workflow",Leave Management,Major,High,Open,TC-21
+OHRM-37,"Unable to execute leave rejection workflow due to missing request records in Admin queue",Leave Management,Major,High,Open,TC-22
+OHRM-38,"Unable to execute overlapping leave validation test due to upstream leave request persistence and approval blockers",Leave Management,Minor,Medium,Open,TC-23
+OHRM-41,"System fails to allow or process leave applications with the same start and end date (Single-day leave)",Leave Management,Major,High,Open,TC-09
+OHRM-43,"System fails to reject invalid special characters (e.g., @, $, numbers) in the employee name fields during creation/editing",PIM,Minor,Medium,Open,TC-10
