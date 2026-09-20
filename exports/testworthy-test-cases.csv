@@ -1,0 +1,52 @@
+Test Case ID,Title,Module,Priority,Status,Linked Story,Linked Defect
+TC-01,Login with valid Admin credentials,Authentication,High,Passed,OHRM-11,-
+TC-02,Login with invalid password,Authentication,High,Failed,OHRM-12,OHRM-31
+TC-03,Login with non-existent username,Authentication,High,Passed,OHRM-12,-
+TC-04,Login with empty username and password fields,Authentication,Medium,Passed,OHRM-12,-
+TC-05,Verify Forgot Password link navigates correctly,Authentication,Medium,Passed,OHRM-12,-
+TC-06,Logout clears session (back button after logout does not show cached page),Authentication,High,Passed,OHRM-13,-
+TC-07,Direct URL access to a protected page while logged out redirects to login,Authentication,High,Passed,OHRM-14,-
+TC-08,Login with SQL-injection-style string in username or password fields,Authentication,High,Passed,OHRM-12,-
+TC-09,Login with correct password containing leading or trailing spaces,Authentication,Medium,Passed,OHRM-12,-
+TC-10,Login with username in different case (e.g. Admin vs admin),Authentication,Low,Passed,OHRM-11,-
+TC-11,5+ rapid failed login attempts - check for lockout or rate-limiting,Authentication,High,Failed,OHRM-14,OHRM-39
+TC-12,Session timeout after prolonged inactivity redirects to login,Authentication,Medium,Passed,OHRM-13,-
+TC-13,Add new employee with all required fields (valid data),PIM,High,Passed,PIM-Add,-
+TC-14,Add new employee with missing required field,PIM,High,Passed,PIM-Validation,-
+TC-15,Search for an existing employee by full name,PIM,Medium,Passed,PIM-Search,-
+TC-16,Search for a non-existent employee (verify no records found message),PIM,Medium,Passed,PIM-Search,-
+TC-17,Edit an existing employee's job title and verify the update persists,PIM,High,Passed,PIM-Edit,-
+TC-18,Upload a profile picture for an employee (valid file type),PIM,Medium,Passed,PIM-Add,-
+TC-19,Attempt to upload an unsupported file type as a profile picture,PIM,Medium,Passed,PIM-Validation,-
+TC-20,Verify employee list pagination works correctly with a large number of records,PIM,Low,Passed,PIM-Search,-
+TC-21,Add employee with a name at maximum allowed character length,PIM,Low,Passed,PIM-Validation,-
+TC-22,Add employee with valid special characters in name (e.g. O'Brien hyphenated names),PIM,Medium,Passed,PIM-Validation,-
+TC-23,Delete an employee record and verify it is removed from the list,PIM,High,Passed,PIM-Edit,-
+TC-24,Filter employee list by Employment Status,PIM,Low,Passed,PIM-Search,-
+TC-25,Sort employee list by name or ID ascending and descending,PIM,Low,Passed,PIM-Search,-
+TC-26,Edit employee details then navigate away without saving - verify changes not persisted,PIM,Medium,Passed,PIM-Edit,-
+TC-27,Add employee with a future-dated joining date,PIM,Medium,Passed,PIM-Add,-
+TC-28,Add employee with an invalid date format in the joining-date field,PIM,Medium,Passed,PIM-Validation,-
+TC-29,Verify all fields on the Personal Details tab match what was entered at creation,PIM,Medium,Passed,PIM-Edit,-
+TC-30,Add employee leaving all optional fields blank,PIM,Medium,Passed,PIM-Add,-
+TC-31,Verify employee ID is auto-generated and unique across multiple new records,PIM,High,Passed,PIM-Add,-
+TC-32,Attempt to add two employees with identical names - verify stored as distinct records,PIM,Medium,Passed,PIM-Add,-
+TC-52,Verify system rejects invalid special characters (e.g. @ $) in employee name field,PIM,Medium,Failed,PIM-Validation,OHRM-43
+TC-33,Apply for leave with valid date range and available balance,Leave Management,High,Blocked,Leave-Apply,OHRM-34
+TC-34,Apply for leave exceeding available balance,Leave Management,High,Passed,Leave-Apply,-
+TC-35,Apply for leave with an end date before the start date,Leave Management,High,Passed,Leave-Apply,-
+TC-36,View leave balance accuracy after a leave request is approved,Leave Management,High,Blocked,Leave-Balance,OHRM-34
+TC-37,View leave request status as Pending immediately after submission,Leave Management,Medium,Failed,Leave-Status,OHRM-35
+TC-38,Approve a pending leave request (admin) and verify status updates,Leave Management,High,Blocked,Leave-Approval,OHRM-34
+TC-39,Reject a pending leave request (admin) and verify status updates,Leave Management,High,Passed,Leave-Approval,-
+TC-40,Attempt to apply for leave on a date already covered by an existing approved leave request,Leave Management,High,Failed,Leave-Apply,OHRM-38
+TC-41,Apply for leave with the same start and end date (single-day leave),Leave Management,Medium,Failed,Leave-Apply,OHRM-41
+TC-42,Cancel a leave request while it is still Pending,Leave Management,Medium,Passed,Leave-Apply,-
+TC-43,Attempt to cancel a leave request that is already Approved,Leave Management,Medium,Passed,Leave-Apply,-
+TC-44,View leave history filtered by a past date range,Leave Management,Low,Passed,Leave-Status,-
+TC-45,Apply for leave spanning a weekend - verify day-count calculation,Leave Management,Medium,Passed,Leave-Apply,-
+TC-46,Verify leave balance updates only after approval not at submission,Leave Management,Medium,Passed,Leave-Balance,-
+TC-47,Apply for two different leave types - verify correct balance deducted from each,Leave Management,Medium,Passed,Leave-Balance,-
+TC-48,As admin view the team leave calendar - verify approved leave displays accurately,Leave Management,Medium,Passed,Leave-Approval,-
+TC-49,Attempt to approve or reject a leave request already approved or rejected,Leave Management,High,Passed,Leave-Approval,-
+TC-50,Apply for leave with a required reason or comment field left empty,Leave Management,Medium,Passed,Leave-Apply,-
